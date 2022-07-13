@@ -1,0 +1,162 @@
+
+    ############ Testing on some task examples ############
+
+    ------------context recognition (topn_sim)-------------
+
+     word: sound
+     most similar: [('sounds', 0.7998544573783875), ('audible', 0.6813746690750122), ('synthesizers', 0.6688981652259827), ('noise', 0.6624677181243896), ('timbre', 0.6545382738113403), ('microphone', 0.6518235206604004), ('percussive', 0.6505706310272217)]
+
+     word: wave
+     most similar: [('waves', 0.6624614000320435), ('photons', 0.5869194269180298), ('damped', 0.5798312425613403), ('beam', 0.5773756504058838), ('oscillating', 0.5768604874610901), ('oscillator', 0.5734477043151855), ('polarization', 0.565467357635498)]
+
+     word: army
+     most similar: [('troops', 0.8240241408348083), ('brigade', 0.7829094529151917), ('garrison', 0.7515774965286255), ('militia', 0.7378638982772827), ('forces', 0.7286810874938965), ('armies', 0.7241778373718262), ('soldiers', 0.7187033891677856)]
+
+     word: king
+     most similar: [('prince', 0.7842431664466858), ('throne', 0.6965755224227905), ('vii', 0.6833831667900085), ('sigismund', 0.6822296380996704), ('jeroboam', 0.6795689463615417), ('son', 0.677566647529602), ('emperor', 0.6772143244743347)]
+
+     word: achilles
+     most similar: [('odysseus', 0.8359383940696716), ('patroclus', 0.8348032236099243), ('agamemnon', 0.8016487956047058), ('hector', 0.773185670375824), ('priam', 0.7706372141838074), ('aeneas', 0.7666701078414917), ('heracles', 0.7638031244277954)]
+
+     word: cave
+     most similar: [('caves', 0.6955857872962952), ('lascaux', 0.6142826676368713), ('dinosaur', 0.6026957035064697), ('cavern', 0.5997269749641418), ('dartmoor', 0.5887242555618286), ('caverns', 0.5824931859970093), ('grotto', 0.5817782282829285)]
+
+     word: quantum
+     most similar: [('particle', 0.7722447514533997), ('electromagnetism', 0.7057285308837891), ('newtonian', 0.6926286220550537), ('physics', 0.6874595880508423), ('mechanics', 0.6863306760787964), ('entanglement', 0.6745004057884216), ('hamiltonian', 0.6648967266082764)]
+
+     word: machine
+     most similar: [('machines', 0.6974966526031494), ('calculator', 0.6809131503105164), ('device', 0.6683545708656311), ('generator', 0.6670430898666382), ('microprogram', 0.629601240158081), ('chip', 0.622283399105072), ('automatic', 0.621117353439331)]
+
+    ------------------gender recognition-------------------
+
+     king - male + female:
+nearest words: [('king', 0.916273832321167), ('prince', 0.7048934698104858), ('queen', 0.6747803688049316), ('herod', 0.6640430688858032), ('chilperic', 0.6610722541809082), ('jeroboam', 0.6472939252853394), ('melisende', 0.6374166011810303)]
+
+     man - male + female:
+nearest words: [('man', 0.8596652150154114), ('thief', 0.6792217493057251), ('woman', 0.6733664274215698), ('girl', 0.6502343416213989), ('sailor', 0.639944314956665), ('beast', 0.6304106712341309), ('brave', 0.6258941888809204)]
+
+     son - male + female:
+nearest words: [('son', 0.9210202693939209), ('daughter', 0.7926528453826904), ('wife', 0.7823622226715088), ('grandson', 0.7794996500015259), ('cousin', 0.7652394771575928), ('father', 0.7532418966293335), ('brother', 0.7402088642120361)]
+
+     father - male + female:
+nearest words: [('father', 0.8926552534103394), ('wife', 0.7725236415863037), ('son', 0.7662512063980103), ('mother', 0.7577146291732788), ('grandfather', 0.7503862380981445), ('daughter', 0.7227614521980286), ('grandmother', 0.7096400856971741)]
+
+     grandfather - male + female:
+nearest words: [('grandfather', 0.8742948174476624), ('grandson', 0.7252202033996582), ('grandmother', 0.7128603458404541), ('father', 0.7110887765884399), ('cousin', 0.7015892267227173), ('niece', 0.6907380223274231), ('granddaughter', 0.6775596141815186)]
+
+     husband - male + female:
+nearest words: [('husband', 0.8963401317596436), ('wife', 0.7742290496826172), ('daughter', 0.6823642253875732), ('teresa', 0.6558403372764587), ('jeane', 0.6546378135681152), ('anne', 0.6536790728569031), ('faye', 0.6507474780082703)]
+
+     boyfriend - male + female:
+nearest words: [('liz', 0.6912389993667603), ('boyfriend', 0.6761584281921387), ('sheila', 0.6627035140991211), ('federline', 0.6576451063156128), ('girlfriend', 0.6522353887557983), ('faye', 0.6458648443222046), ('natalie', 0.6411405801773071)]
+
+    ------------------plural recognition------------------- 
+
+    ....................Numerable words....................
+
+     cars - car + house :
+     nearest words: [('houses', 0.7725355625152588), ('house', 0.7359380125999451), ('buildings', 0.6200940608978271), ('rooms', 0.6166506409645081), ('mansions', 0.570199728012085), ('lords', 0.5614354610443115), ('apartments', 0.5605225563049316)]
+
+     cars - car + tree :
+     nearest words: [('trees', 0.8216824531555176), ('tree', 0.7679303288459778), ('vines', 0.7105018496513367), ('shrubs', 0.6787079572677612), ('fruits', 0.6624457240104675), ('grasses', 0.6221066117286682), ('plants', 0.6117449998855591)]
+
+     houses - house + car :
+     nearest words: [('cars', 0.8302093744277954), ('car', 0.7549225091934204), ('vehicles', 0.7522723078727722), ('motorcycles', 0.7207256555557251), ('trucks', 0.691439151763916), ('automobiles', 0.6856763958930969), ('racing', 0.6643871665000916)]
+
+     houses - house + tree :
+     nearest words: [('trees', 0.7759147882461548), ('tree', 0.7587480545043945), ('shrubs', 0.6703552007675171), ('vines', 0.6491279006004333), ('skeletons', 0.602437436580658), ('grasses', 0.6010758876800537), ('banyan', 0.6003277897834778)]
+
+     trees - tree + car :
+     nearest words: [('cars', 0.8299397230148315), ('car', 0.7970117330551147), ('trucks', 0.7065156698226929), ('automobiles', 0.6989611387252808), ('vehicles', 0.6832504868507385), ('trains', 0.6583188772201538), ('porsche', 0.6563103795051575)]
+
+     trees - tree + house :
+     nearest words: [('house', 0.7635983228683472), ('houses', 0.6980198621749878), ('homes', 0.5902836322784424), ('buildings', 0.5413535833358765), ('quarters', 0.537436842918396), ('rooms', 0.5350269079208374), ('councillors', 0.527397632598877)]
+
+  ..................Not numerable words..................
+
+     cars - car + sand :
+     nearest words: [('sand', 0.7823681831359863), ('valleys', 0.6954654455184937), ('swamps', 0.6625934839248657), ('dunes', 0.6617474555969238), ('clays', 0.6457564830780029), ('basins', 0.6361352801322937), ('molds', 0.6356240510940552)]
+
+     cars - car + man :
+     nearest words: [('man', 0.6853868365287781), ('men', 0.6189612150192261), ('mankind', 0.5343344211578369), ('things', 0.5259749889373779), ('beings', 0.5217180252075195), ('feathers', 0.5066128969192505), ('humanity', 0.49926358461380005)]
+
+     cars - car + some :
+     nearest words: [('some', 0.8596363067626953), ('many', 0.7893717288970947), ('these', 0.6760182976722717), ('those', 0.6636431217193604), ('certain', 0.6264868974685669), ('both', 0.6168867349624634), ('various', 0.5946585536003113)]
+
+     cars - car + water :
+     nearest words: [('water', 0.8357754349708557), ('seawater', 0.702324628829956), ('reservoirs', 0.6978540420532227), ('soils', 0.6927555799484253), ('moisture', 0.6761017441749573), ('molds', 0.6713647246360779), ('nutrients', 0.6643960475921631)]
+
+     houses - house + sand :
+     nearest words: [('sand', 0.7535310387611389), ('valleys', 0.6874306201934814), ('swamps', 0.6799526214599609), ('fertile', 0.6776310801506042), ('shallow', 0.6734879016876221), ('dunes', 0.6629141569137573), ('deciduous', 0.6507138013839722)]
+
+     houses - house + man :
+     nearest words: [('man', 0.6196051836013794), ('beautiful', 0.5493980646133423), ('beast', 0.5308646559715271), ('gilded', 0.49934449791908264), ('adonis', 0.4621008336544037), ('beasts', 0.46201154589653015), ('horses', 0.4540528655052185)]
+
+     houses - house + some :
+     nearest words: [('some', 0.8025768995285034), ('many', 0.7699745893478394), ('these', 0.5925486087799072), ('numerous', 0.5885411500930786), ('various', 0.5649175047874451), ('several', 0.5622435808181763), ('both', 0.5578064918518066)]
+
+     houses - house + water :
+     nearest words: [('water', 0.8272553086280823), ('saline', 0.7184468507766724), ('seawater', 0.6931559443473816), ('soils', 0.6858326196670532), ('irrigation', 0.683278501033783), ('reservoirs', 0.6743866205215454), ('aquifers', 0.6735591888427734)]
+
+     trees - tree + sand :
+     nearest words: [('sand', 0.8182030916213989), ('swamps', 0.7297598719596863), ('gravel', 0.7102866172790527), ('grasslands', 0.7100547552108765), ('valleys', 0.7089005708694458), ('forests', 0.696398138999939), ('oases', 0.6955574750900269)]
+
+     trees - tree + man :
+     nearest words: [('man', 0.7180073857307434), ('men', 0.582101583480835), ('scourge', 0.529929518699646), ('brave', 0.5287032127380371), ('beasts', 0.5057787299156189), ('youths', 0.4968740940093994), ('thief', 0.48978203535079956)]
+
+     trees - tree + some :
+     nearest words: [('some', 0.8502330183982849), ('many', 0.8205392360687256), ('these', 0.67490553855896), ('numerous', 0.6381959915161133), ('those', 0.6361023783683777), ('several', 0.6228369474411011), ('both', 0.6129297018051147)]
+
+     trees - tree + water :
+     nearest words: [('water', 0.8728282451629639), ('soils', 0.7404531240463257), ('seawater', 0.7220053672790527), ('saline', 0.7207831740379333), ('reservoirs', 0.715476393699646), ('moisture', 0.7112199068069458), ('aquifers', 0.695605993270874)]
+
+    --------------------- other tests----------------------
+     husband - male vs wife - female : 0.82875144
+     king - male vs queen - female : 0.78076726
+     birds-cars vs bird - car 0.8584523
+
+     france-paris+italy [('italy', 0.8141948580741882), ('france', 0.7193835973739624), ('spain', 0.6809945106506348), ('galicia', 0.6766030788421631), ('belgium', 0.6321279406547546), ('portugal', 0.6318067312240601), ('armenia', 0.6254932880401611), ('austria', 0.6242083311080933), ('greece', 0.6218194961547852), ('hungary', 0.6199344396591187)]
+
+     Average result (on sample of  13 words) for numerable plural recognition:0.8045
+     Against average top similarity (between vocab words) of: 0.7297
+
+
+#################### SETTINGS INFO ####################
+
+  Using parameters: Custom__alpha6
+
+  Corpus file:  C:\Users\X556U\Desktop\Datasets\text8
+  Number of documents in file:  1
+  Using 100.00% of total data 
+  Using strategy: "split&token"
+
+  Number of word in file (by simple splitting) : 17005207
+  Number of word will be in use ( 100.00% ) approx. 17005207
+
+  ----------------- vocabulary building -----------------
+
+  Lemmatization of vocabulary words:  False
+  Lowercase tr. of vocabulary words:  True
+  Excluding stopwords from vocabulary:  False
+  Excluding punctuat. from vocabulary:  True
+  Manual removing:  False, from set:  ['\n']
+
+---------------- corpus preprocessing -----------------
+
+  Lemmatization of corpus:  False
+  Lowercase tr. of corpus:  True
+  Preserving syntax of corpus:  True
+  Substitution of word not in vocabulary: True, with text: ''
+
+  -------------- TRAINING'S SETTINGS INFO ---------------
+
+  Batching document: True
+  Batch size: 500
+  Number of epochs:  20
+
+  ------------------- model parameter -------------------
+
+  Minimum frequency of word:  10
+  Size of vectors:  80
+  Architecture:  CBOW
+  Size of syntax window:  8

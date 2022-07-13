@@ -1,0 +1,122 @@
+############ Testing on some task examples ############
+
+    ------------context recognition (topn_sim)-------------
+
+     word: sound
+     most similar: [('sounds', 0.7884826064109802), ('timbre', 0.707903265953064), ('audible', 0.691011905670166), ('stereo', 0.6670273542404175), ('noise', 0.6644103527069092), ('instrument', 0.652410626411438), ('vibrations', 0.6507932543754578)]
+
+     word: wave
+     most similar: [('waves', 0.6675293445587158), ('oscillating', 0.5919387936592102), ('photons', 0.5769699215888977), ('vortex', 0.5751333236694336), ('particle', 0.5719333291053772), ('diffusion', 0.5684114098548889), ('propagating', 0.5633741617202759)]
+
+     word: army
+     most similar: [('troops', 0.821821391582489), ('brigade', 0.7628991603851318), ('armies', 0.7398285865783691), ('forces', 0.7382841110229492), ('garrison', 0.7378785610198975), ('militia', 0.7185560464859009), ('infantry', 0.7164513468742371)]
+
+     word: king
+     most similar: [('prince', 0.7679797410964966), ('throne', 0.7271718382835388), ('pretender', 0.6977903246879578), ('emperor', 0.6901867985725403), ('sigismund', 0.6889387965202332), ('vii', 0.6887569427490234), ('queen', 0.6809651851654053)]
+
+     word: achilles
+     most similar: [('patroclus', 0.8217552900314331), ('agamemnon', 0.8071918487548828), ('hector', 0.8013860583305359), ('odysseus', 0.7945318818092346), ('priam', 0.780875563621521), ('heracles', 0.7678532600402832), ('aeneas', 0.7625478506088257)]
+
+     word: cave
+     most similar: [('caves', 0.6789634227752686), ('grotto', 0.6421880722045898), ('bog', 0.637168288230896), ('caverns', 0.6182000637054443), ('mithraeum', 0.6129822731018066), ('wilderness', 0.6076062321662903), ('skeleton', 0.6059521436691284)]
+
+     word: quantum
+     most similar: [('particle', 0.7403737306594849), ('physics', 0.6804074048995972), ('electromagnetism', 0.6635838747024536), ('mechanics', 0.6558933258056641), ('newtonian', 0.6548453569412231), ('entanglement', 0.6528263092041016), ('heisenberg', 0.6521939039230347)]
+
+     word: machine
+     most similar: [('machines', 0.7149900794029236), ('device', 0.7083233594894409), ('calculator', 0.6787676811218262), ('generator', 0.6767773628234863), ('teleprinter', 0.6378952860832214), ('computer', 0.6370512247085571), ('bombe', 0.6328182220458984)]
+
+    ------------------gender recognition-------------------
+
+     king - male + female:
+nearest words: [('king', 0.9167219400405884), ('prince', 0.7252815365791321), ('queen', 0.697529137134552), ('melisende', 0.6475728154182434), ('herod', 0.6448200345039368), ('sigismund', 0.6366699934005737), ('son', 0.624165952205658)]
+
+     man - male + female:
+nearest words: [('man', 0.8702681064605713), ('woman', 0.6557900905609131), ('girl', 0.6377838850021362), ('thief', 0.6287940740585327), ('totoro', 0.6147050857543945), ('sailor', 0.597574770450592), ('magician', 0.5929275751113892)]
+
+     son - male + female:
+nearest words: [('son', 0.9244430661201477), ('daughter', 0.8076227903366089), ('wife', 0.7794723510742188), ('cousin', 0.7653266191482544), ('grandson', 0.758727490901947), ('father', 0.7221292853355408), ('nephew', 0.7194091081619263)]
+
+     father - male + female:
+nearest words: [('father', 0.8959066867828369), ('mother', 0.7773425579071045), ('wife', 0.7651277780532837), ('son', 0.7532679438591003), ('daughter', 0.7117637395858765), ('grandfather', 0.6997933387756348), ('cousin', 0.6962899565696716)]
+
+     grandfather - male + female:
+nearest words: [('grandfather', 0.8791136741638184), ('grandmother', 0.737420916557312), ('grandson', 0.7142702341079712), ('niece', 0.7049064636230469), ('cousin', 0.6950154900550842), ('granddaughter', 0.6942788362503052), ('daughter', 0.6679296493530273)]
+
+     husband - male + female:
+nearest words: [('husband', 0.8982494473457336), ('wife', 0.7972208857536316), ('daughter', 0.7193629145622253), ('aunt', 0.6605701446533203), ('girlfriend', 0.6499106884002686), ('granddaughter', 0.6498581171035767), ('princess', 0.6488730907440186)]
+
+     boyfriend - male + female:
+nearest words: [('liz', 0.7299835681915283), ('lucy', 0.6793581247329712), ('boyfriend', 0.6659059524536133), ('lucille', 0.6596724987030029), ('lisa', 0.6516289710998535), ('girlfriend', 0.650094747543335), ('geldof', 0.6467708349227905)]
+
+    ------------------plural recognition------------------- 
+
+    ....................Numerable words....................
+
+     cars - car + house :
+     nearest words: [('house', 0.7632915377616882), ('houses', 0.722463846206665), ('lords', 0.6044103503227234), ('rooms', 0.5859585404396057), ('apartments', 0.5677501559257507), ('estates', 0.5564926266670227), ('buildings', 0.5530127286911011)]
+
+     cars - car + tree :
+     nearest words: [('trees', 0.8309517502784729), ('tree', 0.7829439640045166), ('fruits', 0.6495118141174316), ('fruit', 0.6417481899261475), ('plants', 0.6415709257125854), ('shrubs', 0.6329817771911621), ('vines', 0.6324479579925537)]
+
+     houses - house + car :
+     nearest words: [('cars', 0.7910900115966797), ('car', 0.7613800764083862), ('vehicles', 0.7367309331893921), ('motorcycles', 0.7198920249938965), ('automobiles', 0.6847496032714844), ('bike', 0.6527644395828247), ('racing', 0.6450907588005066)]
+
+     houses - house + tree :
+     nearest words: [('trees', 0.8095222115516663), ('tree', 0.7654402852058411), ('shrubs', 0.6110525727272034), ('landscaping', 0.5980542302131653), ('vines', 0.5603822469711304), ('fruits', 0.553574800491333), ('digging', 0.5530359745025635)]
+
+     trees - tree + car :
+     nearest words: [('cars', 0.832369863986969), ('car', 0.7900677919387817), ('automobiles', 0.7177625894546509), ('trucks', 0.6987334489822388), ('vehicles', 0.695493221282959), ('motorcycles', 0.679650068283081), ('bicycles', 0.6661396622657776)]
+
+     trees - tree + house :
+     nearest words: [('house', 0.7576726675033569), ('houses', 0.717401385307312), ('apartments', 0.5851184129714966), ('quarters', 0.5604233741760254), ('inns', 0.5420395731925964), ('homes', 0.5369603633880615), ('dwellings', 0.5345634818077087)]
+
+  ..................Not numerable words..................
+
+     cars - car + sand :
+     nearest words: [('sand', 0.7840951681137085), ('clays', 0.6728062033653259), ('outcroppings', 0.666603147983551), ('valleys', 0.6490306854248047), ('swamps', 0.6476430892944336), ('soils', 0.6366119384765625), ('limestone', 0.6334853172302246)]
+
+     cars - car + man :
+     nearest words: [('man', 0.6957250237464905), ('things', 0.6137542128562927), ('men', 0.6106294989585876), ('mankind', 0.573015570640564), ('beings', 0.5610455274581909), ('pleasures', 0.5403279662132263), ('spirits', 0.5307624340057373)]
+
+     cars - car + some :
+     nearest words: [('some', 0.8557115793228149), ('many', 0.8047454357147217), ('these', 0.6846269965171814), ('those', 0.6415981650352478), ('various', 0.6331470012664795), ('certain', 0.6170721054077148), ('both', 0.616598904132843)]
+
+     cars - car + water :
+     nearest words: [('water', 0.8367474675178528), ('moisture', 0.7117223739624023), ('seawater', 0.709659993648529), ('clays', 0.6823135614395142), ('nutrients', 0.6776139736175537), ('oils', 0.6748189926147461), ('reservoirs', 0.673952043056488)]
+
+     houses - house + sand :
+     nearest words: [('sand', 0.745673656463623), ('valleys', 0.6805641651153564), ('fertile', 0.6756534576416016), ('soils', 0.6728237867355347), ('swamps', 0.6652387380599976), ('terrains', 0.6630192995071411), ('mangrove', 0.6588962078094482)]
+
+     houses - house + man :
+     nearest words: [('man', 0.6026049256324768), ('beautiful', 0.501438558101654), ('beauty', 0.4721645414829254), ('durians', 0.46411949396133423), ('mankind', 0.46166136860847473), ('beast', 0.45816582441329956), ('unspoiled', 0.45253854990005493)]
+
+     houses - house + some :
+     nearest words: [('some', 0.7969928979873657), ('many', 0.7594287395477295), ('numerous', 0.5929050445556641), ('these', 0.5907447934150696), ('various', 0.5616991519927979), ('several', 0.5594881772994995), ('certain', 0.548513650894165)]
+
+     houses - house + water :
+     nearest words: [('water', 0.8297529220581055), ('dams', 0.6878335475921631), ('seawater', 0.6754075288772583), ('soils', 0.6622437238693237), ('reservoirs', 0.661910891532898), ('saline', 0.6617699265480042), ('irrigation', 0.6585986614227295)]
+
+     trees - tree + sand :
+     nearest words: [('sand', 0.8125861883163452), ('swamps', 0.7317191362380981), ('soils', 0.7282890677452087), ('valleys', 0.7209473848342896), ('clumps', 0.7019140124320984), ('oases', 0.7006567120552063), ('clays', 0.6973127722740173)]
+
+     trees - tree + man :
+     nearest words: [('man', 0.70314621925354), ('men', 0.5515288710594177), ('beasts', 0.5121455192565918), ('naked', 0.5103340148925781), ('animals', 0.5085997581481934), ('things', 0.5079221129417419), ('savage', 0.49649614095687866)]
+
+     trees - tree + some :
+     nearest words: [('some', 0.8450419902801514), ('many', 0.8314377069473267), ('these', 0.6741378307342529), ('numerous', 0.6600204706192017), ('both', 0.6582769751548767), ('various', 0.6362350583076477), ('several', 0.6247162818908691)]
+
+     trees - tree + water :
+     nearest words: [('water', 0.8695420622825623), ('seawater', 0.7409753799438477), ('soils', 0.7197731733322144), ('moisture', 0.7182101011276245), ('saline', 0.6957640647888184), ('reservoirs', 0.6885617971420288), ('soil', 0.6861556768417358)]
+
+    --------------------- other tests----------------------
+     husband - male vs wife - female : 0.84602237
+     king - male vs queen - female : 0.806821
+     birds-cars vs bird - car 0.86177963
+
+     france-paris+italy [('italy', 0.810749888420105), ('france', 0.7280207276344299), ('spain', 0.6797699332237244), ('turkey', 0.6787556409835815), ('greece', 0.6673163175582886), ('belgium', 0.6536901593208313), ('hungary', 0.6531786918640137), ('austria', 0.6519051790237427), ('albania', 0.6511317491531372), ('armenia', 0.6452233791351318)]
+
+     Average result (on sample of  13 words) for numerable plural recognition:0.8072
+     Against average top similarity (between vocab words) of: 0.7317
+     rating on (very) small sample task:  1.103
+​

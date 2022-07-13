@@ -1,0 +1,63 @@
+SUL DATASET
+- il dataset condiziona molto i risultati: esempio 'cave' sul lee corpus restituisce "hideout"
+- 'cave' su solo il 20% del dataset dà risultati più 'religiosi'
+- 'cave' sul 100% del dataset dà risultati sia religiosi che geologici
+- se uso meno dati, performa meglio su certi task ma meno bene su altri 
+
+SUL PREPROCESSING
+- non lemmatizzare permette migliori performance anche nella task di contesto
+- nonstop?
+
+SUL TRAINING
+  vanno calibrati bene: vect_size vs n_min
+- vect size: 
+se troppo grande i dati si disperdono
+
+- n_min:
+se ho troppe poche parole nel vocabolario, performa peggio
+sembra che includere parole poco comuni migliori i risultati
+
+- batch_size
+se >> 1000 performa male
+
+- window_size
+per una maggiore window la varianza di top(10)_sim è maggiore (relazioni tra parole più distribuite) 
+  e la media è minore (parole più distribuite nello spazio) 
+dà parole non solo sinonime ma "che è probabile vedere nella stessa frase (es sound - microphone)
+per window15 (ed epochs 25) va peggio (rispetto a 10) sui generi ma meglio sui plurali
+
+- n_epochs
+più training ha l'effetto di abbassare la media di top(10)_sim e aumentare la varianza 
+
+SULLA NORMA
+- la norma vs index nel vocabolario deve scendere avere un andamento al ribasso 
+- perché generalmente più training = maggiori norme
+- molta frequenza la norma sale meno, poiché nessuna direzione preferenziale di update
+
+SU AVGSIM
+- buoni risultati se la media delle cos_sim(top 10) è intorno a 0.7
+- varianza della avg_cos_sim non dev'essere troppo piccola o significa che:
+-- se la media è bassa, troppa dispersione
+-- se la media è alta, troppa concentrazione
+
+SU KST_SIM
+- buoni risultati per vettori con Kst che diminuisce rapidamente
+-- perché significa che sono BEN VICINI A POCHE parole ma poco vicini a molte parole
+- nelle parole meno frequenti, si ha mediamente una discesa molto più lenta
+-- perché essendo poco trainate, i loro valori sono più vicini ad esser casuali
+
+SUL TESTING
+- test del contesto:
+performa meglio con molti dati e n_min basso
+
+- test dei generi: 
+performa meglio su parole molto comuni con pochi dati
+performa meglio su parole poco comuni con molti dati
+performa 
+
+- test dei plurali: 
+servono molti dati per avere buoni risultati
+in particolare per avere buone performance sui non numerabili
+
+
+
